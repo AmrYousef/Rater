@@ -1,0 +1,122 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{4A9CD653-10FD-4BE1-B6DE-26A5E46821A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rater.Core", "Engine\Rater.Core\Rater.Core.csproj", "{711F727E-5DD2-452C-806B-10787A324D7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rater.Domain", "Engine\Rater.Domain\Rater.Domain.csproj", "{4E6B1965-36F4-4E6F-AB57-626188D2974A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rater.ReadModel", "Engine\Rater.ReadModel\Rater.ReadModel.csproj", "{9D07427E-C04D-4FCA-9F16-FEA8A6CFAAD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rater.Services", "Engine\Rater.Services\Rater.Services.csproj", "{1FC1BCD6-3BC8-4F43-B2B2-82B18792601E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rater.WriteModel", "Engine\Rater.WriteModel\Rater.WriteModel.csproj", "{E322E8D6-B414-4E90-96B7-FCE423D43390}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A05785B4-35B5-4125-91E1-DD2CEE5C9F42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rater.Tests", "Tests\Rater.Tests\Rater.Tests.csproj", "{69AF6750-6045-44AB-941F-856AB698F7E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{3390D79C-EB58-49EA-9E5C-F4C1BDEBBDEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rater.Services.Http", "Services\Rater.Services.Http\Rater.Services.Http.csproj", "{766883CE-1E2C-4882-B0F1-54D778AC34A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{B29E7BCB-0B59-4430-A4D7-65FFFD3FD7AA}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "RaterDB", "Database\RaterDB\RaterDB.sqlproj", "{5299E926-B110-4092-A7C5-902FFD6FCF07}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{711F727E-5DD2-452C-806B-10787A324D7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{711F727E-5DD2-452C-806B-10787A324D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{711F727E-5DD2-452C-806B-10787A324D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{711F727E-5DD2-452C-806B-10787A324D7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E6B1965-36F4-4E6F-AB57-626188D2974A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E6B1965-36F4-4E6F-AB57-626188D2974A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E6B1965-36F4-4E6F-AB57-626188D2974A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E6B1965-36F4-4E6F-AB57-626188D2974A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D07427E-C04D-4FCA-9F16-FEA8A6CFAAD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D07427E-C04D-4FCA-9F16-FEA8A6CFAAD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D07427E-C04D-4FCA-9F16-FEA8A6CFAAD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D07427E-C04D-4FCA-9F16-FEA8A6CFAAD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FC1BCD6-3BC8-4F43-B2B2-82B18792601E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FC1BCD6-3BC8-4F43-B2B2-82B18792601E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FC1BCD6-3BC8-4F43-B2B2-82B18792601E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FC1BCD6-3BC8-4F43-B2B2-82B18792601E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E322E8D6-B414-4E90-96B7-FCE423D43390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E322E8D6-B414-4E90-96B7-FCE423D43390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E322E8D6-B414-4E90-96B7-FCE423D43390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E322E8D6-B414-4E90-96B7-FCE423D43390}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69AF6750-6045-44AB-941F-856AB698F7E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69AF6750-6045-44AB-941F-856AB698F7E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69AF6750-6045-44AB-941F-856AB698F7E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69AF6750-6045-44AB-941F-856AB698F7E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{766883CE-1E2C-4882-B0F1-54D778AC34A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{766883CE-1E2C-4882-B0F1-54D778AC34A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{766883CE-1E2C-4882-B0F1-54D778AC34A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{766883CE-1E2C-4882-B0F1-54D778AC34A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5299E926-B110-4092-A7C5-902FFD6FCF07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5299E926-B110-4092-A7C5-902FFD6FCF07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5299E926-B110-4092-A7C5-902FFD6FCF07}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5299E926-B110-4092-A7C5-902FFD6FCF07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5299E926-B110-4092-A7C5-902FFD6FCF07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5299E926-B110-4092-A7C5-902FFD6FCF07}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{711F727E-5DD2-452C-806B-10787A324D7B} = {4A9CD653-10FD-4BE1-B6DE-26A5E46821A3}
+		{4E6B1965-36F4-4E6F-AB57-626188D2974A} = {4A9CD653-10FD-4BE1-B6DE-26A5E46821A3}
+		{9D07427E-C04D-4FCA-9F16-FEA8A6CFAAD1} = {4A9CD653-10FD-4BE1-B6DE-26A5E46821A3}
+		{1FC1BCD6-3BC8-4F43-B2B2-82B18792601E} = {4A9CD653-10FD-4BE1-B6DE-26A5E46821A3}
+		{E322E8D6-B414-4E90-96B7-FCE423D43390} = {4A9CD653-10FD-4BE1-B6DE-26A5E46821A3}
+		{69AF6750-6045-44AB-941F-856AB698F7E0} = {A05785B4-35B5-4125-91E1-DD2CEE5C9F42}
+		{766883CE-1E2C-4882-B0F1-54D778AC34A0} = {3390D79C-EB58-49EA-9E5C-F4C1BDEBBDEE}
+		{5299E926-B110-4092-A7C5-902FFD6FCF07} = {B29E7BCB-0B59-4430-A4D7-65FFFD3FD7AA}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://gallantgeek.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Tests\\Rater.Tests\\Rater.Tests.csproj
+		SccProjectTopLevelParentUniqueName1 = Rater.sln
+		SccProjectName1 = Tests/Rater.Tests
+		SccLocalPath1 = Tests\\Rater.Tests
+		SccProjectUniqueName2 = Services\\Rater.Services.Http\\Rater.Services.Http.csproj
+		SccProjectTopLevelParentUniqueName2 = Rater.sln
+		SccProjectName2 = Services/Rater.Services.Http
+		SccLocalPath2 = Services\\Rater.Services.Http
+		SccProjectUniqueName3 = Engine\\Rater.Core\\Rater.Core.csproj
+		SccProjectTopLevelParentUniqueName3 = Rater.sln
+		SccProjectName3 = Engine/Rater.Core
+		SccLocalPath3 = Engine\\Rater.Core
+		SccProjectUniqueName4 = Engine\\Rater.Domain\\Rater.Domain.csproj
+		SccProjectTopLevelParentUniqueName4 = Rater.sln
+		SccProjectName4 = Engine/Rater.Domain
+		SccLocalPath4 = Engine\\Rater.Domain
+		SccProjectUniqueName5 = Engine\\Rater.ReadModel\\Rater.ReadModel.csproj
+		SccProjectTopLevelParentUniqueName5 = Rater.sln
+		SccProjectName5 = Engine/Rater.ReadModel
+		SccLocalPath5 = Engine\\Rater.ReadModel
+		SccProjectUniqueName6 = Engine\\Rater.Services\\Rater.Services.csproj
+		SccProjectTopLevelParentUniqueName6 = Rater.sln
+		SccProjectName6 = Engine/Rater.Services
+		SccLocalPath6 = Engine\\Rater.Services
+		SccProjectUniqueName7 = Engine\\Rater.WriteModel\\Rater.WriteModel.csproj
+		SccProjectTopLevelParentUniqueName7 = Rater.sln
+		SccProjectName7 = Engine/Rater.WriteModel
+		SccLocalPath7 = Engine\\Rater.WriteModel
+		SccProjectUniqueName8 = Database\\RaterDB\\RaterDB.sqlproj
+		SccProjectTopLevelParentUniqueName8 = Rater.sln
+		SccProjectName8 = Database/RaterDB
+		SccLocalPath8 = Database\\RaterDB
+	EndGlobalSection
+EndGlobal

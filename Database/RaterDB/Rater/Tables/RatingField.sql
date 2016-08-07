@@ -1,0 +1,6 @@
+﻿CREATE TABLE [Rater].[RatingField] (
+    [Id]   UNIQUEIDENTIFIER NOT NULL,
+    [Name] NVARCHAR (200)   NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+

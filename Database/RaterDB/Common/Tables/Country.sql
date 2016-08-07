@@ -1,0 +1,6 @@
+﻿CREATE TABLE [Common].[Country] (
+    [Id]   UNIQUEIDENTIFIER NOT NULL,
+    [Name] NVARCHAR (100)   NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
