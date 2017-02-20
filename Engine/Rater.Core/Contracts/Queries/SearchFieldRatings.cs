@@ -2,7 +2,7 @@
 
 namespace Rater.Core.Contracts.Queries
 {
-    public class SearchFieldRatings : BaseQuery
+    public class SearchFieldRatings : Query
     {
         public int PageNumber { get; set; }
         public int PageSize { get; set; }

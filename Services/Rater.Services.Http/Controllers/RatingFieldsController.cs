@@ -43,7 +43,7 @@ namespace Rater.Services.Http.Controllers
         // GET api/values/5
         public RatingFieldApiReponse Get(Guid id)
         {
-            var query = new GetFieldById(id, Guid.Empty);
+            var query = new GetFieldById(id, CurrentFrameworkIdentity);
             var result = _queryBus.Send<GetFieldById, RatingFieldReponse>(query);
 
             if (result != null)
