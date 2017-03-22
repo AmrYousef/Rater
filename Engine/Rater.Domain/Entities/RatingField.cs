@@ -1,5 +1,5 @@
-using Framework.Core.Domain;
 using System.Collections.Generic;
+using Framework.Core.Domain;
 
 namespace Rater.Domain.Entities
 {
@@ -17,7 +17,7 @@ namespace Rater.Domain.Entities
 
         public static RatingField CreateNew(string fieldName)
         {
-            RatingField newField = new RatingField();
+            var newField = new RatingField();
             newField.ProcessNew(fieldName);
             return newField;
         }

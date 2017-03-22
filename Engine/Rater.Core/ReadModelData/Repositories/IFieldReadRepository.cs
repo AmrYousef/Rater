@@ -1,7 +1,7 @@
-﻿using Framework.Core.Data.Core;
-using Rater.Core.ReadModelData.Response;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Framework.Core.Data.Core;
+using Rater.Core.ReadModelData.Response;
 
 namespace Rater.Core.ReadModelData.Repositories
 {

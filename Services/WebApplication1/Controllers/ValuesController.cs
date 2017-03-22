@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
 using Framework.Core.CQRS.Core;
-using Rater.Core.Contracts.Commands;
+using Microsoft.AspNetCore.Mvc;
 using Rater.Core.Contracts.Queries;
 using Rater.Core.ReadModelData.Response;
 
@@ -14,12 +10,14 @@ namespace WebApplication1.Controllers
     public class ValuesController : Controller
     {
         private ICommandBus _commandBus;
-        private IQueryBus _queryBus;
+        private readonly IQueryBus _queryBus;
+
         public ValuesController(ICommandBus commandBus, IQueryBus queryBus)
         {
             _commandBus = commandBus;
             _queryBus = queryBus;
         }
+
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
@@ -28,10 +26,10 @@ namespace WebApplication1.Controllers
             //_commandBus.Send(command);
             //return new string[] { "Success"}; ;
 
-            var query = new SearchFieldRatings("" , 0 , 0);
+            var query = new SearchFieldRatings("", 0, 0);
             var result = _queryBus.Send<SearchFieldRatings, TestQueryResponse>(query);
 
-            return new string[] { result.Result };
+            return new[] {result.Result};
         }
 
         // GET api/values/5
@@ -43,13 +41,13 @@ namespace WebApplication1.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value)
+        public void Post([FromBody] string value)
         {
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value)
+        public void Put(int id, [FromBody] string value)
         {
         }
 

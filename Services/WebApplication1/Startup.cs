@@ -1,20 +1,19 @@
-﻿using System;
+﻿using Framework.Core.CQRS.Core;
+using Framework.CQRS;
+using Framework.SimpleInjector;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Framework.Core.CQRS.Core;
-using Framework.SimpleInjector;
-using Framework.CQRS;
-using Rater.Core.Contracts.Queries;
-using Rater.Services.QueryHandler;
-using Rater.Core.ReadModelData.Response;
-using SimpleInjector;
-using Microsoft.AspNetCore.Mvc.Controllers;
-using SimpleInjector.Integration.AspNetCore.Mvc;
 using Rater.Core.Contracts.Commands;
+using Rater.Core.Contracts.Queries;
+using Rater.Core.ReadModelData.Response;
 using Rater.Services.CommandHandler;
+using Rater.Services.QueryHandler;
+using SimpleInjector;
+using SimpleInjector.Integration.AspNetCore.Mvc;
 
 namespace WebApplication1
 {
@@ -24,8 +23,8 @@ namespace WebApplication1
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
+                .AddJsonFile("appsettings.json", false, true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
         }
@@ -62,14 +61,9 @@ namespace WebApplication1
             //container.Registerapi
 
             //return container.GetInstance<IServiceProvider>();
-
-
-
-
-
         }
 
-        
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {

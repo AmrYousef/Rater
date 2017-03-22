@@ -4,10 +4,6 @@ namespace Rater.Core.Contracts.Queries
 {
     public class SearchFieldRatings : Query
     {
-        public int PageNumber { get; set; }
-        public int PageSize { get; set; }
-        public string SearchText { get; set; }
-
         public SearchFieldRatings(string searchText, int pageNumber, int pageSize)
         {
             SearchText = searchText;
@@ -20,5 +16,9 @@ namespace Rater.Core.Contracts.Queries
             PageNumber = pageNumber;
             PageSize = pageSize;
         }
+
+        public int PageNumber { get; set; }
+        public int PageSize { get; set; }
+        public string SearchText { get; set; }
     }
 }

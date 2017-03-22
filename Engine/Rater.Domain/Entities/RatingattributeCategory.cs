@@ -1,6 +1,6 @@
-using Framework.Core.Domain;
 using System;
 using System.Collections.Generic;
+using Framework.Core.Domain;
 
 namespace Rater.Domain.Entities
 {
@@ -12,7 +12,7 @@ namespace Rater.Domain.Entities
         }
 
         public string Name { get; set; }
-        public Nullable<Guid> RatingFieldId { get; set; }
+        public Guid? RatingFieldId { get; set; }
         public virtual ICollection<RatingattributeCategoryValue> RatingattributeCategoryValues { get; set; }
         public virtual RatingField RatingField { get; set; }
     }

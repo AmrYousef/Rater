@@ -7,7 +7,7 @@ namespace Rater.Services.QueryHandler
 {
     public class GetFieldByIdHandler : BaseQueryHandler<GetFieldById, RatingFieldReponse>
     {
-        private IFieldReadRepository _fieldReadRepository;
+        private readonly IFieldReadRepository _fieldReadRepository;
 
         public GetFieldByIdHandler(IFieldReadRepository fieldReadRepository)
         {

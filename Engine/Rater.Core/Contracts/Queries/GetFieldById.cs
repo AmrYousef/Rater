@@ -1,12 +1,12 @@
-﻿using Framework.Core.CQRS;
+﻿using System;
+using Framework.Core.CQRS;
 using Framework.Core.Securtiy;
-using System;
 
 namespace Rater.Core.Contracts.Queries
 {
     public class GetFieldById : AuthenticatedQuery
     {
-        public GetFieldById(Guid fieldId , FrameworkClaimsIdentity identity) :
+        public GetFieldById(Guid fieldId, FrameworkClaimsIdentity identity) :
             base(identity)
         {
             FieldId = fieldId;

@@ -1,6 +1,6 @@
-﻿using Framework.Core.Data.Core;
+﻿using System;
+using Framework.Core.Data.Core;
 using Rater.Domain.Entities;
-using System;
 
 namespace Rater.Domain.Repository
 {

@@ -8,7 +8,7 @@ namespace Rater.Services.CommandHandler
 {
     public class UpdateRatingFieldHandler : BaseCommandHandler<UpdateRatingField>
     {
-        private IUnitOfWork _unitOfWork;
+        private readonly IUnitOfWork _unitOfWork;
 
         public UpdateRatingFieldHandler(IUnitOfWork unitOfWork)
         {
@@ -18,7 +18,7 @@ namespace Rater.Services.CommandHandler
         public override void Handle(UpdateRatingField command)
         {
             var fieldFepository = _unitOfWork.Repository<IRatingFieldWriteRepository, RatingField>();
-            RatingField updatedField = fieldFepository.GetFieldById(command.FieldId);
+            var updatedField = fieldFepository.GetFieldById(command.FieldId);
 
             updatedField.Update(command.FieldName);
 

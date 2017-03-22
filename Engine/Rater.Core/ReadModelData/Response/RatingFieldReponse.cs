@@ -1,5 +1,5 @@
-﻿using Framework.Core.CQRS;
-using System;
+﻿using System;
+using Framework.Core.CQRS;
 
 namespace Rater.Core.ReadModelData.Response
 {

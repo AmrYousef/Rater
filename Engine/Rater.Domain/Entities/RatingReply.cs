@@ -1,5 +1,5 @@
-using Framework.Core.Domain;
 using System;
+using Framework.Core.Domain;
 
 namespace Rater.Domain.Entities
 {
@@ -7,7 +7,7 @@ namespace Rater.Domain.Entities
     {
         public Guid RatingId { get; set; }
         public string Text { get; set; }
-        public Nullable<Guid> UserId { get; set; }
+        public Guid? UserId { get; set; }
         public virtual User User { get; set; }
         public virtual Rating Rating { get; set; }
     }

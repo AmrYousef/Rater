@@ -8,7 +8,7 @@ namespace Rater.Services.CommandHandler
 {
     public class DeleteRatingFieldHandler : BaseCommandHandler<DeleteRatingField>
     {
-        private IUnitOfWork _unitOfWork;
+        private readonly IUnitOfWork _unitOfWork;
 
         public DeleteRatingFieldHandler(IUnitOfWork unitOfWork)
         {
@@ -18,7 +18,7 @@ namespace Rater.Services.CommandHandler
         public override void Handle(DeleteRatingField command)
         {
             var fieldFepository = _unitOfWork.Repository<IRatingFieldWriteRepository, RatingField>();
-            RatingField deletedField = fieldFepository.GetFieldById(command.FieldId);
+            var deletedField = fieldFepository.GetFieldById(command.FieldId);
 
             deletedField.Delete();
 
