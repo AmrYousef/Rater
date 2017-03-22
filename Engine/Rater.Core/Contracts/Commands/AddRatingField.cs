@@ -3,11 +3,11 @@ using Framework.Core.Securtiy;
 
 namespace Rater.Core.Contracts.Commands
 {
-    public class AddRatingField : AuthenticatedCommand
+    public class AddRatingField : Command
     {
         public string FieldName { get; private set; }
 
-        public AddRatingField(string fieldName, FrameworkClaimsIdentity identity) : base(identity)
+        public AddRatingField(string fieldName)
         {
             FieldName = fieldName;
         }

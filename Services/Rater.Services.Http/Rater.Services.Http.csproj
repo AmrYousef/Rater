@@ -328,17 +328,9 @@
       <Project>{4e6b1965-36f4-4e6f-ab57-626188d2974a}</Project>
       <Name>Rater.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Engine\Rater.ReadModel\Rater.ReadModel.csproj">
-      <Project>{9d07427e-c04d-4fca-9f16-fea8a6cfaad1}</Project>
-      <Name>Rater.ReadModel</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Engine\Rater.Services\Rater.Services.csproj">
       <Project>{1fc1bcd6-3bc8-4f43-b2b2-82b18792601e}</Project>
       <Name>Rater.Services</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Engine\Rater.WriteModel\Rater.WriteModel.csproj">
-      <Project>{e322e8d6-b414-4e90-96b7-fce423d43390}</Project>
-      <Name>Rater.WriteModel</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

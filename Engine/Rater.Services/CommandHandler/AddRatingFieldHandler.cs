@@ -10,18 +10,18 @@ namespace Rater.Services.CommandHandler
     {
         private IUnitOfWork _unitOfWork;
 
-        public AddRatingFieldHandler(IUnitOfWork unitOfWork)
+        public AddRatingFieldHandler()//IUnitOfWork unitOfWork)
         {
-            _unitOfWork = unitOfWork;
+            //_unitOfWork = unitOfWork;
         }
 
         public override void Handle(AddRatingField command)
         {
-            RatingField newField = RatingField.CreateNew(command.FieldName);
+            //RatingField newField = RatingField.CreateNew(command.FieldName);
 
-            _unitOfWork.Repository<IRatingFieldWriteRepository, RatingField>().Add(newField);
+            //_unitOfWork.Repository<IRatingFieldWriteRepository, RatingField>().Add(newField);
 
-            _unitOfWork.SaveChanges();
+            //_unitOfWork.SaveChanges();
         }
     }
 }
