@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Framework.Core.CQRS.Core;
+using Framework.SimpleInjector;
 using Framework.CQRS;
 using Rater.Core.Contracts.Queries;
 using Rater.Services.QueryHandler;

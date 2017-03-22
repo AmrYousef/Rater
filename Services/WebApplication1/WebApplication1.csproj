@@ -10,11 +10,11 @@
   <ItemGroup>
     <PackageReference Include="Framework.Core" Version="1.0.7" />
     <PackageReference Include="Framework.Cqrs" Version="1.0.0" />
+    <PackageReference Include="Framework.SimpleInjector" Version="1.0.0" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.2" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.1.1" />
-    <PackageReference Include="SimpleInjector.Extensions.LifetimeScoping" Version="3.3.2" />
     <PackageReference Include="SimpleInjector.Integration.AspNetCore.Mvc" Version="3.3.2" />
   </ItemGroup>
   <ItemGroup>
