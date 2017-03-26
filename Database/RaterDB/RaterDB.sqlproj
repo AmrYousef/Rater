@@ -69,13 +69,13 @@
     <Folder Include="Common\" />
     <Folder Include="Common\Tables\" />
     <Folder Include="Security\" />
+    <Folder Include="Rater\Views\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Comparison\DbToProject.scmp" />
     <None Include="Comparison\ProjectToDb.scmp" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Tables\Table.sql" />
     <Build Include="Rater\Tables\RatingAttributes.sql" />
     <Build Include="Rater\Tables\RatingReply.sql" />
     <Build Include="Rater\Tables\RatingAttributeCategoryValueCountry.sql" />
@@ -88,5 +88,6 @@
     <Build Include="Common\Tables\Country.sql" />
     <Build Include="Security\Rater.sql" />
     <Build Include="Security\Common.sql" />
+    <Build Include="Rater\Views\vRatingField.sql" />
   </ItemGroup>
 </Project>
