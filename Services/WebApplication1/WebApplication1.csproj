@@ -22,7 +22,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Engine\Rater.Core\Rater.Core.csproj" />
+    <ProjectReference Include="..\..\Engine\Rater.ReadModel\Rater.ReadModel.csproj" />
     <ProjectReference Include="..\..\Engine\Rater.Services\Rater.Services.csproj" />
+    <ProjectReference Include="..\..\Engine\Rater.WriteModel\Rater.WriteModel.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
 ﻿using Framework.Core.CQRS.Core;
+using Framework.Core.Data.Core;
 using Framework.CQRS;
 using Framework.SimpleInjector;
 using Microsoft.AspNetCore.Builder;
@@ -9,9 +10,15 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Rater.Core.Contracts.Commands;
 using Rater.Core.Contracts.Queries;
-using Rater.Core.ReadModelData.Response;
+using Rater.Core.ReadModelData.Repositories;
+using Rater.Core.ReadModelData.Response.Collection;
+using Rater.Domain.Repository;
+using Rater.ReadModel;
+using Rater.ReadModel.Repositories;
 using Rater.Services.CommandHandler;
 using Rater.Services.QueryHandler;
+using Rater.WriteModel;
+using Rater.WriteModel.Repositories;
 using SimpleInjector;
 using SimpleInjector.Integration.AspNetCore.Mvc;
 
@@ -42,17 +49,17 @@ namespace WebApplication1
             var container = new FrameworkDependencyContainer();
             container.Register<ICommandBus, SimpleCommandBus>();
             container.Register<IQueryBus, SimpleQueryBus>();
-            //container.Register<IReadContext, RaterReadContext>();
-            //container.Register<IFieldReadRepository, FieldReadRepository>();
+            container.Register<IReadContext, RaterReadContext>();
+            container.Register<IFieldReadRepository, FieldReadRepository>();
             //container.RegisterQueryHandler<GetFieldById, GetFieldByIdHandler, RatingFieldReponse>();
-            container.RegisterQueryHandler<SearchFieldRatings, SearchFieldRatingsHandler, TestQueryResponse>();
+            container.RegisterQueryHandler<SearchFieldRatings, SearchFieldRatingsHandler, RatingFieldReponseCollection>();
 
 
             services.AddSimpleInjectorTagHelperActivation(container);
             services.AddSingleton<IControllerActivator>(new SimpleInjectorControllerActivator(container));
-            //container.Register<IWriteContext, RaterWriteContext>();
-            //container.Register<IUnitOfWork, RaterUnitOfwork>();
-            //container.Register<IRatingFieldWriteRepository, RatingFieldWriteRepository>();
+            container.Register<IWriteContext, RaterWriteContext>();
+            container.Register<IUnitOfWork, RaterUnitOfwork>();
+            container.Register<IRatingFieldWriteRepository, RatingFieldWriteRepository>();
             container.RegisterCommandHandler<AddRatingField, AddRatingFieldHandler>();
             //container.RegisterCommandHandler<UpdateRatingField, UpdateRatingFieldHandler>();
             //container.RegisterCommandHandler<DeleteRatingField, DeleteRatingFieldHandler>();

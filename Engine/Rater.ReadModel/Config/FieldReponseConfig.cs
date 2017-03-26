@@ -1,19 +1,20 @@
 using Rater.Core.ReadModelData.Response;
-using System.Data.Entity.ModelConfiguration;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore;
 
 namespace Rater.ReadModel.Config
 {
-    public class FieldReponseConfig : EntityTypeConfiguration<RatingFieldReponse>
+    public class FieldReponseConfig //: EntityTypeConfiguration<RatingFieldReponse>
     {
-        public FieldReponseConfig()
+        public static void Configure(EntityTypeBuilder<RatingFieldReponse> builder)
         {
-            ToTable("vRatingField", "Rater");
+            builder.ToTable("vRatingField", "Rater");
             // Primary Key
-            HasKey(t => t.FieldId);
+            builder.HasKey(t => t.FieldId);
 
             // Properties
-            Property(t => t.FieldName).HasColumnName("FieldName");
-            Property(t => t.FieldId).HasColumnName("FieldId");
+            builder.Property(t => t.FieldName).HasColumnName("FieldName");
+            builder.Property(t => t.FieldId).HasColumnName("FieldId");
         }
     }
 }

@@ -7,13 +7,13 @@ namespace Rater.Domain.Entities
     {
         private RatingField()
         {
-            RatingAspects = new List<RatingAspect>();
-            RatingattributeCategories = new List<RatingattributeCategory>();
+            //RatingAspects = new List<RatingAspect>();
+            //RatingattributeCategories = new List<RatingattributeCategory>();
         }
 
         public string Name { get; set; }
-        public virtual ICollection<RatingAspect> RatingAspects { get; set; }
-        public virtual ICollection<RatingattributeCategory> RatingattributeCategories { get; set; }
+        //public virtual ICollection<RatingAspect> RatingAspects { get; set; }
+        //public virtual ICollection<RatingattributeCategory> RatingattributeCategories { get; set; }
 
         public static RatingField CreateNew(string fieldName)
         {

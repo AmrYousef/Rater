@@ -1,18 +1,19 @@
 using Framework.EntityFramework;
 using Rater.WriteModel.Config;
-using System.Data.Entity;
+using Microsoft.EntityFrameworkCore;
+using Rater.Domain.Entities;
 
 namespace Rater.WriteModel
 {
     public class RaterWriteContext : BaseWriteContext
     {
-        static RaterWriteContext()
-        {
-            Database.SetInitializer<RaterWriteContext>(null);
-        }
+        //static RaterWriteContext()
+        //{
+        //    Database.SetInitializer<RaterWriteContext>(null);
+        //}
 
         public RaterWriteContext()
-            : base("RaterWriteConnection")
+            : base(@"Data Source=.;Initial Catalog=RaterDB;Integrated Security=True;Pooling=False")
         {
         }
 
@@ -26,17 +27,18 @@ namespace Rater.WriteModel
         //public DbSet<RatingField> RatingFields { get; set; }
         //public DbSet<RatingReply> RatingReplies { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Configurations.Add(new CountryConfig());
-            modelBuilder.Configurations.Add(new UserConfig());
-            modelBuilder.Configurations.Add(new RatingConfig());
-            modelBuilder.Configurations.Add(new RatingAspectConfig());
-            modelBuilder.Configurations.Add(new RatingattributeCategoryConfig());
-            modelBuilder.Configurations.Add(new RatingattributeCategoryValueConfig());
-            modelBuilder.Configurations.Add(new RatingAttributeConfig());
-            modelBuilder.Configurations.Add(new RatingFieldConfig());
-            modelBuilder.Configurations.Add(new RatingReplyConfig());
+            //CountryConfig.Configure(modelBuilder.Entity<Country>());
+            RatingFieldConfig.Configure(modelBuilder.Entity<RatingField>());
+            //modelBuilder.Configurations.Add(new UserConfig());
+            //modelBuilder.Configurations.Add(new RatingConfig());
+            //modelBuilder.Configurations.Add(new RatingAspectConfig());
+            //modelBuilder.Configurations.Add(new RatingattributeCategoryConfig());
+            //modelBuilder.Configurations.Add(new RatingattributeCategoryValueConfig());
+            //modelBuilder.Configurations.Add(new RatingAttributeConfig());
+            //modelBuilder.Configurations.Add(new RatingFieldConfig());
+            //modelBuilder.Configurations.Add(new RatingReplyConfig());
         }
     }
 }

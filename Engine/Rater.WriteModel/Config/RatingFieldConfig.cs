@@ -1,24 +1,25 @@
 using Rater.Domain.Entities;
-using System.Data.Entity.ModelConfiguration;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore;
 
 namespace Rater.WriteModel.Config
 {
-    public class RatingFieldConfig : EntityTypeConfiguration<RatingField>
+    public class RatingFieldConfig //: EntityTypeConfiguration<RatingField>
     {
-        public RatingFieldConfig()
+         public static void Configure(EntityTypeBuilder<RatingField> builder)
         {
             // Primary Key
-            HasKey(t => t.Id);
+            builder.HasKey(t => t.Id);
 
             // Properties
-            Property(t => t.Name)
+            builder.Property(t => t.Name)
                 .IsRequired()
                 .HasMaxLength(200);
 
             // Table & Column Configpings
-            ToTable("RatingField", "Rater");
-            Property(t => t.Id).HasColumnName("Id");
-            Property(t => t.Name).HasColumnName("Name");
+            builder.ToTable("RatingField", "Rater");
+            builder.Property(t => t.Id).HasColumnName("Id");
+            builder.Property(t => t.Name).HasColumnName("Name");
         }
     }
 }
